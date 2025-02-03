@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccd5;
+            color: #d63384;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #c9184a;
+        }
+        #calendar {
+            display: none;
+            margin-top: 20px;
+        }
+        #confirmation {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #gif-container {
+            display: none;
+            margin-top: 20px;
+        }
+        #cat-image {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine?</h1>
+        <img id="cat-image" src="images (1).jpg" alt="Cute Cat Holding Flowers" width="300">
+        <br>
+        <button onclick="acceptDate()">Yes</button>
+        <button onclick="declineDate()">No</button>
+        
+        <div id="invite-message" style="display: none;">
+            <h2>This is your official invitation to be my Valentine's date!</h2>
+            <input type="date" id="date-picker" onchange="confirmDate()">
+        </div>
+
+        <div id="confirmation">
+            <p>This is now confirmed, due to high volume of workload and exams, this year will be special, even if it's just a few hours, we are able to spend time together!</p>
+        </div>
+
+        <div id="gif-container">
+            <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Cute Valentine Gif" width="300">
+        </div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="https://www.example.com/sweet.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function acceptDate() {
+            document.getElementById('invite-message').style.display = 'block';
+        }
+        function confirmDate() {
+            document.getElementById('confirmation').style.display = 'block';
+            document.getElementById('gif-container').style.display = 'block';
+        }
+        function declineDate() {
+            alert("Aww, maybe next time? 😢");
+        }
+    </script>
+</body>
+</html>
